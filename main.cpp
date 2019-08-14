@@ -1,3 +1,4 @@
+#include "args.h"
 #include "common.h"
 #include "math/complex.h"
 
@@ -8,12 +9,19 @@
  *
  * @return int
  */
-int main()
+int main( int argc, const char** argv )
 {
-    Math::Complex c( 10, 1 );
+    std::optional<Boilerplate::CommandlineArgs_t> args = Boilerplate::ParseArgs( argc, argv );
+
+    if( !args )
+    {
+        return 0;
+    }
+
     Math::Complex d( 1, 1 );
 
-    std::cout << std::boolalpha << ( c == d ) << std::endl;
+    std::cout << ( args->verbose ? std::boolalpha : std::noboolalpha ) << ( args->value == d )
+              << std::endl;
 
     return 0;
 }
