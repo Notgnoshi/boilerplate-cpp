@@ -6,3 +6,7 @@
 	path = depends/clipp
 	url = git@github.com:muellan/clipp.git
 	branch = master
+[submodule "depends/cppitertools"]
+	path = depends/cppitertools
+	url = git@github.com:ryanhaining/cppitertools.git
+	branch = master
