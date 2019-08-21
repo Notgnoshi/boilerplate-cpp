@@ -18,9 +18,9 @@ GMOCK_LIB := libgmock.a
 GMOCK_HEADERS := $(GMOCK_DIR)/include/gmock/*.h $(GMOCK_DIR)/include/gmock/internal/*.h $(GTEST_HEADERS)
 GMOCK_SOURCES_ := $(GMOCK_DIR)/src/*.cc $(GMOCK_HEADERS)
 
-INCLUDE_FLAGS := -I$(INCLUDE_DIR) -I$(DEPS_DIR)/clipp/include -I$(DEPS_DIR)/cppitertools
+INCLUDE_FLAGS := -I$(INCLUDE_DIR) -I$(DEPS_DIR)/clipp/include -I$(DEPS_DIR)/cppitertools -I$(DEPS_DIR)/GSL/include
 # Prevent clang from complaining about warnings in clipp
-INCLUDE_FLAGS += -isystem $(DEPS_DIR)/clipp/include -isystem $(DEPS_DIR)/cppitertools
+INCLUDE_FLAGS += -isystem $(DEPS_DIR)/clipp/include -isystem $(DEPS_DIR)/cppitertools -isystem $(DEPS_DIR)/GSL/include
 WARNING_FLAGS := -Wall -Wpedantic -Wextra -Werror -Wconversion -Wcast-align -Wcast-qual            \
 				 -Wctor-dtor-privacy -Wdisabled-optimization -Wold-style-cast -Wformat=2           \
 				 -Winit-self -Wmissing-declarations -Wmissing-include-dirs                         \

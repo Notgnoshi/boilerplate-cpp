@@ -10,3 +10,7 @@
 	path = depends/cppitertools
 	url = git@github.com:ryanhaining/cppitertools.git
 	branch = master
+[submodule "depends/GSL"]
+	path = depends/GSL
+	url = git@github.com:microsoft/GSL.git
+	branch = master
